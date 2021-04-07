@@ -1,0 +1,29 @@
+{
+  "name" : "Article",
+  "category" : "Articles",
+  "mappings" : {
+    "ART" : "tcpos.ART.DESCRIPTION",
+    "ARC" : "tcpos.ART.DESCRIPTION",
+    "TRA_ART" : "tcpos.ART.DESCRIPTION"
+  },
+  "requires" : [ "graph.tcpos" ],
+  "translations" : {
+    "DE" : {
+      "name" : "Artikel",
+      "category" : "Artikel"
+    },
+    "EN" : {
+      "name" : "Article",
+      "category" : "Articles"
+    },
+    "FR" : {
+      "name" : "Article",
+      "category" : "Articles"
+    }
+  },
+  "path" : "tcpos.ART",
+  "data_type" : "TEXT",
+  "default_mapping" : "ART",
+  "company" : "tcpos_epo",
+  "graph" : "tcpos"
+}

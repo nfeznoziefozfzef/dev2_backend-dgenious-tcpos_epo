@@ -1,0 +1,24 @@
+{
+  "paths" : [ "permissions.hq", "graph.tcpos", "scheme.*" ],
+  "name" : "System administrator",
+  "comment" : "This set of permissions gives all administrative privileges",
+  "alias" : "sys_admin",
+  "admin_profile" : {
+    "regular_sharer" : true,
+    "template_sharer" : true,
+    "mandatory_sharer" : true,
+    "document_editor" : true,
+    "limited_exporter" : true,
+    "full_exporter" : true,
+    "execution_delegator" : true,
+    "user_manager" : true,
+    "debugger" : true,
+    "task_editor" : true
+  },
+  "profile_keys" : {
+    "tcpos.SHO" : {
+      "all_values" : true
+    }
+  },
+  "company" : "tcpos_epo"
+}

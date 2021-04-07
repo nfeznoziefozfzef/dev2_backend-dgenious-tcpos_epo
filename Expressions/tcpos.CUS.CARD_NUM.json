@@ -1,0 +1,32 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Kunden ID",
+      "category" : "Kunden"
+    },
+    "EN" : {
+      "name" : "Card number",
+      "category" : "Customers",
+      "comment" : "Client's payment card number"
+    },
+    "FR" : {
+      "name" : "Carte client",
+      "category" : "Clients",
+      "comment" : "Numéro de carte de paiement du client"
+    }
+  },
+  "name" : "Carte client",
+  "category" : "Clients",
+  "comment" : "Numéro de carte de paiement du client",
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | auth.scheme.CUS | auth.scheme.TRA | auth.scheme.TRA_PAY | auth.scheme.HIST_BAL | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{CUS}}.`CARD_NUM`",
+  "path" : "tcpos.CUS.CARD_NUM",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "scheme_sql" : {
+    "TRA" : "{{TRA}}.`CARD_NUM`",
+    "HIST_BAL" : "{{HIST_BAL}}.`CARD_NUM`"
+  },
+  "company" : "tcpos_epo"
+}

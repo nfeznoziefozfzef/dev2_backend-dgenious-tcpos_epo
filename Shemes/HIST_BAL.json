@@ -1,0 +1,21 @@
+{
+  "requires" : [ "graph.tcpos", "scheme.HIST_BAL" ],
+  "grants" : [ "auth.scheme.HIST_BAL" ],
+  "name" : "Solde historique",
+  "comment" : "Ce schéma donne accès au solde historique des badges de paiement",
+  "translations" : {
+    "EN" : {
+      "name" : "Historical balance",
+      "comment" : "This scheme details the historical balances of customer cards"
+    },
+    "FR" : {
+      "name" : "Solde historique",
+      "comment" : "Ce schéma donne accès au solde historique des badges de paiement"
+    }
+  },
+  "visible" : true,
+  "graph" : "tcpos",
+  "scheme" : "HIST_BAL",
+  "entry_table" : "HIST_BAL",
+  "company" : "tcpos_epo"
+}

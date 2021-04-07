@@ -1,0 +1,37 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Zeit",
+      "category" : "Tickets",
+      "comment" : "Ticket Zeit"
+    },
+    "EN" : {
+      "name" : "Time",
+      "category" : "Tickets",
+      "comment" : "Ticket time"
+    },
+    "FR" : {
+      "name" : "Heure",
+      "category" : "Tickets",
+      "comment" : "Heure du ticket"
+    }
+  },
+  "name" : "Heure",
+  "category" : "Tickets",
+  "comment" : "Heure du ticket",
+  "properties" : {
+    "format" : "HH:mm:ss"
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | auth.scheme.TRA | auth.scheme.TRA_PAY | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{TRA}}.`TRANS_TIME`",
+  "path" : "tcpos.TRA.TRANS_TIME",
+  "type" : "TIME",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "scheme_sql" : {
+    "TRA_CAR" : "{{TRA_CAR}}.`TRANS_TIME`",
+    "TRA_PAY" : "{{TRA_PAY}}.`TRANS_TIME`",
+    "TRA_ART" : "{{TRA_ART}}.`TRANS_TIME`"
+  },
+  "company" : "tcpos_epo"
+}

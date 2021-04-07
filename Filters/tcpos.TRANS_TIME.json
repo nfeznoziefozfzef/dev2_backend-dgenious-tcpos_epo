@@ -1,0 +1,33 @@
+{
+  "name" : "Heure",
+  "category" : "Date et heure",
+  "comment" : "Heure de la transaction",
+  "mappings" : {
+    "TRA" : "tcpos.TRA.TRANS_TIME",
+    "TRA_ART" : "tcpos.TRA.TRANS_TIME",
+    "TRA_CAR" : "tcpos.TRA.TRANS_TIME",
+    "TRA_PAY" : "tcpos.TRA.TRANS_TIME"
+  },
+  "requires" : [ "graph.tcpos" ],
+  "translations" : {
+    "DE" : {
+      "name" : "Zeit",
+      "category" : "Datum und Zeit",
+      "comment" : "Zeit der Transaktion"
+    },
+    "EN" : {
+      "name" : "Time",
+      "category" : "Date and time",
+      "comment" : "Time of the transaction"
+    },
+    "FR" : {
+      "name" : "Heure",
+      "category" : "Date et heure",
+      "comment" : "Heure de l'opération"
+    }
+  },
+  "path" : "tcpos.TRANS_TIME",
+  "data_type" : "TIME",
+  "company" : "tcpos_epo",
+  "graph" : "tcpos"
+}

@@ -1,0 +1,28 @@
+{
+  "name" : "Group C",
+  "category" : "Articles",
+  "mappings" : {
+    "ART" : "tcpos.GRC.DESCRIPTION",
+    "TRA_ART" : "tcpos.GRC.DESCRIPTION"
+  },
+  "requires" : [ "graph.tcpos" ],
+  "translations" : {
+    "DE" : {
+      "name" : "Gruppe C",
+      "category" : "Artikel"
+    },
+    "EN" : {
+      "name" : "Group C",
+      "category" : "Articles"
+    },
+    "FR" : {
+      "name" : "Groupe C",
+      "category" : "Articles"
+    }
+  },
+  "path" : "tcpos.GRC",
+  "data_type" : "TEXT",
+  "default_mapping" : "ART",
+  "company" : "tcpos_epo",
+  "graph" : "tcpos"
+}

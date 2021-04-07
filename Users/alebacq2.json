@@ -1,0 +1,18 @@
+{
+  "username" : "alebacq2",
+  "company" : "tcpos_epo",
+  "name" : "antoine2",
+  "language" : "FR",
+  "email" : "a.lebacq@dgenious.com",
+  "permission_groups" : [ "shop_manager" ],
+  "profile_keys" : {
+    "tcpos.SWA" : {
+      "all_values" : true
+    },
+    "tcpos.SHO" : {
+      "all_values" : true
+    }
+  },
+  "user_id" : 1654396501,
+  "editable" : true
+}

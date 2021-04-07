@@ -1,0 +1,32 @@
+{
+  "name" : "Customer",
+  "category" : "Customers",
+  "mappings" : {
+    "CUS" : "tcpos.CUS.DESCRIPTION",
+    "TRA" : "tcpos.CUS.DESCRIPTION",
+    "TRA_ART" : "tcpos.CUS.DESCRIPTION",
+    "TRA_PAY" : "tcpos.CUS.DESCRIPTION",
+    "TRA_CAR" : "tcpos.CUS.DESCRIPTION",
+    "HIST_BAL" : "tcpos.CUS.DESCRIPTION"
+  },
+  "requires" : [ "graph.tcpos" ],
+  "translations" : {
+    "DE" : {
+      "name" : "Kunde",
+      "category" : "Kunden"
+    },
+    "EN" : {
+      "name" : "Customer",
+      "category" : "Customers"
+    },
+    "FR" : {
+      "name" : "Client",
+      "category" : "Clients"
+    }
+  },
+  "path" : "tcpos.CUS",
+  "data_type" : "TEXT",
+  "default_mapping" : "CUS",
+  "company" : "tcpos_epo",
+  "graph" : "tcpos"
+}

@@ -1,0 +1,28 @@
+{
+  "name" : "Group A",
+  "category" : "Articles",
+  "mappings" : {
+    "ART" : "tcpos.GRA.DESCRIPTION",
+    "TRA_ART" : "tcpos.GRA.DESCRIPTION"
+  },
+  "requires" : [ "graph.tcpos" ],
+  "translations" : {
+    "DE" : {
+      "name" : "Gruppe A",
+      "category" : "Artikel"
+    },
+    "EN" : {
+      "name" : "Group A",
+      "category" : "Articles"
+    },
+    "FR" : {
+      "name" : "Groupe A",
+      "category" : "Articles"
+    }
+  },
+  "path" : "tcpos.GRA",
+  "data_type" : "TEXT",
+  "default_mapping" : "ART",
+  "company" : "tcpos_epo",
+  "graph" : "tcpos"
+}

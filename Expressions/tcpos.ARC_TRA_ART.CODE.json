@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Gratis Code",
+      "category" : "Verkaufte Artikel",
+      "comment" : "Code der angibt, aus welchem Grund ein Artikel gratis vergeben wurde"
+    },
+    "EN" : {
+      "name" : "Article gratuity code",
+      "category" : "Articles sold",
+      "comment" : "Code indicating the reason why an article has been given away for free"
+    },
+    "FR" : {
+      "name" : "Code gratuité d'article",
+      "category" : "Articles vendus",
+      "comment" : "Code désignant la raison pour laquelle la vente d'un article a été effectuée à titre gratuit"
+    }
+  },
+  "name" : "Code gratuité d'article",
+  "category" : "Articles vendus",
+  "comment" : "Code désignant la raison pour laquelle la vente d'un article a été effectuée à titre gratuit",
+  "requires" : "graph.tcpos;auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{ARC_TRA_ART}}.`CODE`",
+  "path" : "tcpos.ARC_TRA_ART.CODE",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tcpos_epo"
+}

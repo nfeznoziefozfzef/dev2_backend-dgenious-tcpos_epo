@@ -1,0 +1,32 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Preis",
+      "category" : "Verkaufte Artikel"
+    },
+    "EN" : {
+      "name" : "Price",
+      "category" : "Articles sold",
+      "comment" : "Article price on the transaction date"
+    },
+    "FR" : {
+      "name" : "Prix",
+      "category" : "Ventes par articles",
+      "comment" : "Prix de l'article au jour de la transaction"
+    }
+  },
+  "name" : "Prix",
+  "category" : "Ventes par articles",
+  "comment" : "Prix de l'article au jour de la transaction",
+  "properties" : {
+    "format" : "0.00%",
+    "format_type" : "percent"
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{TRA_ART}}.`REFERENCE_PRICE`",
+  "path" : "tcpos.TRA_ART.REFERENCE_PRICE",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tcpos_epo"
+}

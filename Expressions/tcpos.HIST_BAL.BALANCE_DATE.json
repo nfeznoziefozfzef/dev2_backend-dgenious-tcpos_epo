@@ -1,0 +1,21 @@
+{
+  "translations" : {
+    "EN" : {
+      "name" : "Historical date",
+      "category" : "Historical balance"
+    },
+    "FR" : {
+      "name" : "Date du solde",
+      "category" : "Solde Historique"
+    }
+  },
+  "name" : "Date du solde",
+  "category" : "Solde Historique",
+  "requires" : "graph.tcpos;auth.scheme.HIST_BAL | _SYS_",
+  "sql" : "{{HIST_BAL}}.`BALANCE_DATE`",
+  "path" : "tcpos.HIST_BAL.BALANCE_DATE",
+  "type" : "DATE",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tcpos_epo"
+}

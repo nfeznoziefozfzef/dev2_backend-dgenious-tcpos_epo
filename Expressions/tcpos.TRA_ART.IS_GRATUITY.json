@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Gratis Artikel",
+      "category" : "Verkaufte Artikel",
+      "comment" : "Wert des Typs WAHR/FALSCH, der anzeigt, ob ein Artikel gratis gegeben wurde"
+    },
+    "EN" : {
+      "name" : "Free article",
+      "category" : "Articles sold",
+      "comment" : "Value of type TRUE/FALSE indicating if this article was given for free"
+    },
+    "FR" : {
+      "name" : "Article gratuit",
+      "category" : "Ventes par articles",
+      "comment" : "Valeur de type vrai/faux qui indique si cet article a été donné gratuitement"
+    }
+  },
+  "name" : "Article gratuit",
+  "category" : "Ventes par articles",
+  "comment" : "Valeur de type vrai/faux qui indique si cet article a été donné gratuitement",
+  "requires" : "graph.tcpos;auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{TRA_ART}}.`CAUSAL_ID` is not null",
+  "path" : "tcpos.TRA_ART.IS_GRATUITY",
+  "type" : "BOOLEAN",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tcpos_epo"
+}

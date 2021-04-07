@@ -1,0 +1,34 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Datum",
+      "category" : "Tickets",
+      "comment" : "Ticket Datum"
+    },
+    "EN" : {
+      "name" : "Date",
+      "category" : "Tickets",
+      "comment" : "Ticket date"
+    },
+    "FR" : {
+      "name" : "Date",
+      "category" : "Tickets",
+      "comment" : "Date comptable"
+    }
+  },
+  "name" : "Date",
+  "category" : "Tickets",
+  "comment" : "Date comptable",
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | auth.scheme.TRA | auth.scheme.TRA_PAY | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{TRA}}.`BOOKKEEPING_DATE`",
+  "path" : "tcpos.TRA.BOOKKEEPING_DATE",
+  "type" : "DATE",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "scheme_sql" : {
+    "TRA_CAR" : "{{TRA_CAR}}.`BOOKKEEPING_DATE`",
+    "TRA_PAY" : "{{TRA_PAY}}.`BOOKKEEPING_DATE`",
+    "TRA_ART" : "{{TRA_ART}}.`BOOKKEEPING_DATE`"
+  },
+  "company" : "tcpos_epo"
+}

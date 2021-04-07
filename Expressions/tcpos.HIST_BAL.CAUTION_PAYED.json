@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "EN" : {
+      "name" : "Historical deposit",
+      "category" : "Historical balance"
+    },
+    "FR" : {
+      "name" : "Caution",
+      "category" : "Solde Historique"
+    }
+  },
+  "name" : "Caution",
+  "category" : "Solde Historique",
+  "properties" : {
+    "format" : "0,0.00",
+    "format_unit" : "CHF",
+    "format_pos" : "prefix",
+    "format_dec_length" : 2,
+    "format_mand_decimals" : true,
+    "format_type" : "unit"
+  },
+  "requires" : "graph.tcpos;auth.scheme.HIST_BAL | _SYS_",
+  "sql" : "{{HIST_BAL}}.`CAUTION_PAYED`",
+  "path" : "tcpos.HIST_BAL.CAUTION_PAYED",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tcpos_epo"
+}

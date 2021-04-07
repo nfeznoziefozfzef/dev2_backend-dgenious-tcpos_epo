@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Gratis Beschreibung",
+      "category" : "Verkaufte Artikel",
+      "comment" : "Grund warum ein Artikel gratis vergeben wurde"
+    },
+    "EN" : {
+      "name" : "Article gratuity description",
+      "category" : "Articles sold",
+      "comment" : "Reason why an article has been given away for free"
+    },
+    "FR" : {
+      "name" : "Gratuité d'article",
+      "category" : "Articles vendus",
+      "comment" : "Raison pour laquelle la vente d'un article a été effectuée à titre gratuit"
+    }
+  },
+  "name" : "Gratuité d'article",
+  "category" : "Articles vendus",
+  "comment" : "Raison pour laquelle la vente d'un article a été effectuée à titre gratuit",
+  "requires" : "graph.tcpos;auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{ARC_TRA_ART}}.`DESCRIPTION`",
+  "path" : "tcpos.ARC_TRA_ART.DESCRIPTION",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tcpos_epo"
+}

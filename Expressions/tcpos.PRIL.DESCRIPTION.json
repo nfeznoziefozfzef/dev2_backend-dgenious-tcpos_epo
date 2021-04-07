@@ -1,0 +1,28 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Preisniveau",
+      "category" : "Verkaufte Artikel"
+    },
+    "EN" : {
+      "name" : "Price level",
+      "category" : "Articles sold"
+    },
+    "FR" : {
+      "name" : "Niveau de prix",
+      "category" : "Articles vendus"
+    }
+  },
+  "name" : "Niveau de prix",
+  "category" : "Articles vendus",
+  "properties" : {
+    "width" : 200.0
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{PRIL}}.`DESCRIPTION`",
+  "path" : "tcpos.PRIL.DESCRIPTION",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tcpos_epo"
+}

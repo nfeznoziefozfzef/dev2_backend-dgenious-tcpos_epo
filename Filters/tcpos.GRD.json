@@ -1,0 +1,28 @@
+{
+  "name" : "Group D",
+  "category" : "Articles",
+  "mappings" : {
+    "ART" : "tcpos.GRD.DESCRIPTION",
+    "TRA_ART" : "tcpos.GRD.DESCRIPTION"
+  },
+  "requires" : [ "graph.tcpos" ],
+  "translations" : {
+    "DE" : {
+      "name" : "Gruppe D",
+      "category" : "Artikel"
+    },
+    "EN" : {
+      "name" : "Group D",
+      "category" : "Articles"
+    },
+    "FR" : {
+      "name" : "Groupe D",
+      "category" : "Articles"
+    }
+  },
+  "path" : "tcpos.GRD",
+  "data_type" : "TEXT",
+  "default_mapping" : "ART",
+  "company" : "tcpos_epo",
+  "graph" : "tcpos"
+}

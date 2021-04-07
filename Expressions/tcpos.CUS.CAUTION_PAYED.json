@@ -1,0 +1,36 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Anzahlung",
+      "category" : "Kunden"
+    },
+    "EN" : {
+      "name" : "Deposit",
+      "category" : "Customers",
+      "comment" : "Card deposit"
+    },
+    "FR" : {
+      "name" : "Caution",
+      "category" : "Clients",
+      "comment" : "Caution versée sur la carte"
+    }
+  },
+  "name" : "Caution",
+  "category" : "Clients",
+  "comment" : "Caution versée sur la carte",
+  "properties" : {
+    "format" : "0,0.00",
+    "format_unit" : "CHF",
+    "format_pos" : "prefix",
+    "format_dec_length" : 2,
+    "format_mand_decimals" : true,
+    "format_type" : "unit"
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | auth.scheme.CUS | auth.scheme.TRA | auth.scheme.TRA_PAY | auth.scheme.HIST_BAL | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{CUS}}.`CAUTION_PAYED`",
+  "path" : "tcpos.CUS.CAUTION_PAYED",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tcpos_epo"
+}

@@ -1,0 +1,15 @@
+{
+  "username" : "shopmanager",
+  "company" : "tcpos_epo",
+  "name" : "shop manager",
+  "language" : "FR",
+  "email" : "isabel@thedblab.com",
+  "permission_groups" : [ "shop_manager" ],
+  "profile_keys" : {
+    "tcpos.SHO" : {
+      "values" : [ "EPO Automates" ]
+    }
+  },
+  "user_id" : 496324709,
+  "editable" : true
+}

@@ -1,0 +1,10 @@
+{
+  "name" : "Description gratuité",
+  "category" : "Tickets",
+  "sql" : "{{}}.`DESCRIPTION`",
+  "path" : "tcpos..DESCRIPTION",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : false,
+  "company" : "tcpos_epo"
+}

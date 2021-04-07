@@ -1,0 +1,13 @@
+{
+  "name" : "EPO",
+  "languages" : [ "FR", "DE", "EN" ],
+  "grants" : [ "graph.tcpos" ],
+  "enabled" : true,
+  "colour" : "yellow",
+  "production" : true,
+  "company" : "tcpos_epo",
+  "admin_profile_restrictions" : {
+    "template_sharer" : false
+  },
+  "graphs" : [ "tcpos" ]
+}

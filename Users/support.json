@@ -1,0 +1,18 @@
+{
+  "username" : "support",
+  "company" : "tcpos_epo",
+  "name" : "dgenious support",
+  "language" : "FR",
+  "email" : "support@dgenious.com",
+  "permission_groups" : [ "sys_admin" ],
+  "profile_keys" : {
+    "tcpos.SWA" : {
+      "all_values" : true
+    },
+    "tcpos.SHO" : {
+      "all_values" : true
+    }
+  },
+  "user_id" : -1229649547,
+  "editable" : true
+}

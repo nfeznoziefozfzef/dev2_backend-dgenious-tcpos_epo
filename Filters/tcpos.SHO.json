@@ -1,0 +1,37 @@
+{
+  "name" : "Etablissement",
+  "category" : "Etablissement",
+  "comment" : "Etablissement dans lequel a eu lieu la transaction",
+  "mappings" : {
+    "SHO" : "tcpos.SHO.DESCRIPTION",
+    "SHO_S" : "tcpos.SHO.DESCRIPTION",
+    "TRA_PAY_AGG" : "tcpos.SHO.DESCRIPTION",
+    "TRA_VAT_AGG" : "tcpos.SHO.DESCRIPTION",
+    "TRA" : "tcpos.SHO.DESCRIPTION",
+    "TRA_ART" : "tcpos.SHO.DESCRIPTION",
+    "TRA_CAR" : "tcpos.SHO.DESCRIPTION"
+  },
+  "requires" : [ "graph.tcpos" ],
+  "translations" : {
+    "DE" : {
+      "name" : "Shop",
+      "category" : "Shop",
+      "comment" : "Shop, in der die Transaktion stattgefunden hat"
+    },
+    "EN" : {
+      "name" : "Shop",
+      "category" : "Shop",
+      "comment" : "Shop where the transaction did take place"
+    },
+    "FR" : {
+      "name" : "Etablissement",
+      "category" : "Etablissement",
+      "comment" : "Etablissement dans lequel a eu lieu la transaction"
+    }
+  },
+  "path" : "tcpos.SHO",
+  "data_type" : "TEXT",
+  "default_mapping" : "SHO",
+  "company" : "tcpos_epo",
+  "graph" : "tcpos"
+}

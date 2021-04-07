@@ -1,0 +1,37 @@
+{
+  "name" : "Date",
+  "category" : "Date et heure",
+  "comment" : "Date de l'opération",
+  "mappings" : {
+    "SHO_S" : "tcpos.SHO_S.BOOKKEEPING_DATE",
+    "TRA_PAY_AGG" : "tcpos.SHO_S.BOOKKEEPING_DATE",
+    "TRA_VAT_AGG" : "tcpos.SHO_S.BOOKKEEPING_DATE",
+    "TRA" : "tcpos.TRA.BOOKKEEPING_DATE",
+    "TRA_ART" : "tcpos.TRA.BOOKKEEPING_DATE",
+    "HIST_BAL" : "tcpos.HIST_BAL.BALANCE_DATE",
+    "TRA_CAR" : "tcpos.TRA.BOOKKEEPING_DATE",
+    "TRA_PAY" : "tcpos.TRA.BOOKKEEPING_DATE"
+  },
+  "requires" : [ "graph.tcpos" ],
+  "translations" : {
+    "DE" : {
+      "name" : "Datum",
+      "category" : "Datum und Zeit",
+      "comment" : "Datum der Transaktion"
+    },
+    "EN" : {
+      "name" : "Date",
+      "category" : "Date and time",
+      "comment" : "Date of the transaction"
+    },
+    "FR" : {
+      "name" : "Date",
+      "category" : "Date et heure",
+      "comment" : "Date de l'opération"
+    }
+  },
+  "path" : "tcpos.BOOKKEEPING_DATE",
+  "data_type" : "DATE",
+  "company" : "tcpos_epo",
+  "graph" : "tcpos"
+}

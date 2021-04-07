@@ -1,0 +1,21 @@
+{
+  "requires" : [ "graph.tcpos", "scheme.TRA_CAR" ],
+  "grants" : [ "auth.scheme.TRA_CAR" ],
+  "name" : "Transactions avec carte",
+  "comment" : "Ce schéma part des cartes de paiement, et donne accès aux tickets, aux clients et aux établissements",
+  "translations" : {
+    "EN" : {
+      "name" : "Card transactions",
+      "comment" : "Use this extraction to list all items of all tickets where a card was used for payment. Form ticket lines one can access tickets and customers"
+    },
+    "FR" : {
+      "name" : "Transactions avec carte",
+      "comment" : "Ce schéma part des cartes de paiement, et donne accès aux tickets, aux clients et aux établissements"
+    }
+  },
+  "visible" : true,
+  "graph" : "tcpos",
+  "scheme" : "TRA_CAR",
+  "entry_table" : "TRA_CAR",
+  "company" : "tcpos_epo"
+}

@@ -1,0 +1,32 @@
+{
+  "name" : "Badge client",
+  "category" : "Customers",
+  "mappings" : {
+    "CUS" : "tcpos.CUS.CARD_NUM",
+    "TRA" : "tcpos.CUS.CARD_NUM",
+    "TRA_ART" : "tcpos.CUS.CARD_NUM",
+    "TRA_PAY" : "tcpos.CUS.CARD_NUM",
+    "TRA_CAR" : "tcpos.CUS.CARD_NUM",
+    "HIST_BAL" : "tcpos.CUS.CARD_NUM"
+  },
+  "requires" : [ "graph.tcpos" ],
+  "translations" : {
+    "DE" : {
+      "name" : "Kunden ID",
+      "category" : "Kunden"
+    },
+    "EN" : {
+      "name" : "Card Number",
+      "category" : "Customers"
+    },
+    "FR" : {
+      "name" : "Badge client",
+      "category" : "Clients"
+    }
+  },
+  "path" : "tcpos.CARD_NUM",
+  "data_type" : "TEXT",
+  "default_mapping" : "CUS",
+  "company" : "tcpos_epo",
+  "graph" : "tcpos"
+}

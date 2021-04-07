@@ -1,0 +1,11 @@
+{
+  "name" : "Code gratuité",
+  "category" : "Tickets",
+  "comment" : "Code désignant la raison pour laquelle la transaction a été effectuée à titre gratuit",
+  "sql" : "{{}}.`CODE`",
+  "path" : "tcpos..CODE",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : false,
+  "company" : "tcpos_epo"
+}

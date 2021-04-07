@@ -1,0 +1,24 @@
+{
+  "translations" : {
+    "EN" : {
+      "name" : "Card type",
+      "category" : "Card transactions",
+      "comment" : "1"
+    },
+    "FR" : {
+      "name" : "Type de carte",
+      "category" : "Transactions sur cartes",
+      "comment" : "1"
+    }
+  },
+  "name" : "Type de carte",
+  "category" : "Transactions sur cartes",
+  "comment" : "1",
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | _SYS_",
+  "sql" : "{{TRA_CAR}}.`CARD_TYPE`",
+  "path" : "tcpos.TRA_CAR.CARD_TYPE",
+  "type" : "ID",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tcpos_epo"
+}

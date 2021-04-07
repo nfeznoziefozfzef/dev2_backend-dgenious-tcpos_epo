@@ -1,0 +1,20 @@
+{
+  "requires" : [ "scheme.COM", "graph.tcpos" ],
+  "grants" : [ "auth.scheme.COM" ],
+  "name" : "Entreprise",
+  "translations" : {
+    "DE" : {
+      "name" : "Firma"
+    },
+    "EN" : {
+      "name" : "Company"
+    },
+    "FR" : {
+      "name" : "Entreprise"
+    }
+  },
+  "graph" : "tcpos",
+  "scheme" : "COM",
+  "entry_table" : "COM",
+  "company" : "tcpos_epo"
+}

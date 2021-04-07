@@ -1,0 +1,33 @@
+{
+  "name" : "Company",
+  "category" : "Companies",
+  "mappings" : {
+    "CUS" : "tcpos.COM.DESCRIPTION",
+    "TRA" : "tcpos.COM.DESCRIPTION",
+    "TRA_ART" : "tcpos.COM.DESCRIPTION",
+    "TRA_PAY" : "tcpos.COM.DESCRIPTION",
+    "TRA_CAR" : "tcpos.COM.DESCRIPTION",
+    "HIST_BAL" : "tcpos.COM.DESCRIPTION",
+    "COM" : "tcpos.COM.DESCRIPTION"
+  },
+  "requires" : [ "graph.tcpos" ],
+  "translations" : {
+    "DE" : {
+      "name" : "Firma",
+      "category" : "Kunden"
+    },
+    "EN" : {
+      "name" : "Company",
+      "category" : "Customers"
+    },
+    "FR" : {
+      "name" : "Entreprise",
+      "category" : "Clients"
+    }
+  },
+  "path" : "tcpos.COM",
+  "data_type" : "TEXT",
+  "default_mapping" : "COM",
+  "company" : "tcpos_epo",
+  "graph" : "tcpos"
+}

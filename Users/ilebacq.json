@@ -1,0 +1,19 @@
+{
+  "username" : "ilebacq",
+  "company" : "tcpos_epo",
+  "name" : "Isabel Lebacq",
+  "language" : "FR",
+  "email" : "i.lebacq@dgenious.com",
+  "phone" : "+41 78 907 54 56",
+  "permission_groups" : [ "sys_admin" ],
+  "profile_keys" : {
+    "tcpos.SWA" : {
+      "all_values" : true
+    },
+    "tcpos.SHO" : {
+      "all_values" : true
+    }
+  },
+  "user_id" : 299192340,
+  "editable" : true
+}

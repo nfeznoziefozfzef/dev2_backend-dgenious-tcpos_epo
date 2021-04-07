@@ -1,0 +1,19 @@
+{
+  "username" : "alebacq",
+  "company" : "tcpos_epo",
+  "name" : "Antoine Lebacq",
+  "language" : "FR",
+  "email" : "a.lebacq@dgenious.com",
+  "phone" : "+41 78 831 60 03",
+  "permission_groups" : [ "sys_admin" ],
+  "profile_keys" : {
+    "tcpos.SWA" : {
+      "all_values" : true
+    },
+    "tcpos.SHO" : {
+      "all_values" : true
+    }
+  },
+  "user_id" : -1216334101,
+  "editable" : true
+}

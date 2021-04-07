@@ -1,0 +1,484 @@
+{
+  "name" : "tcpos-epo-source",
+  "comment" : "tcpos_epo source database",
+  "tables" : [ {
+    "name" : "ARTICLE_CAUSALS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "ID" ]
+    }
+  }, {
+    "name" : "ARTICLES",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "GROUP_A_ID",
+      "type" : "ID"
+    }, {
+      "name" : "GROUP_B_ID",
+      "type" : "ID"
+    }, {
+      "name" : "GROUP_C_ID",
+      "type" : "ID"
+    }, {
+      "name" : "GROUP_D_ID",
+      "type" : "ID"
+    }, {
+      "name" : "ID",
+      "type" : "ID"
+    }, {
+      "name" : "IS_VALID",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "SOLD_BY_WEIGHT",
+      "sql" : "case when MEASURE_UNIT_ID=1 then 0 else 1 end",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "REFERENCE_PRICE",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "GLOBAL_PRICE",
+      "sql" : "PRICE",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "IS_TURNOVER",
+      "sql" : "case when ARTICLE_TYPE=1 then 1 else 0 end",
+      "type" : "BOOLEAN"
+    } ],
+    "pks" : {
+      "fields" : [ "ID" ]
+    },
+    "from" : "select art.*,pri.PRICE from <db>.ARTICLES art left join (<db>.PRICES pri join <db>.PRICELEVELS pril on pri.PRICELEVEL_ID=pril.ID and pril.GLOBAL_PRICELEVEL=1) on art.ID=pri.ARTICLE_ID"
+  }, {
+    "name" : "COMPANIES",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "ID" ]
+    }
+  }, {
+    "name" : "CREDIT_CARDS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "ID" ]
+    }
+  }, {
+    "name" : "CUSTOMERS",
+    "fields" : [ {
+      "name" : "ANNIVERSARY",
+      "sql" : "trunc(ANNIVERSARY)",
+      "type" : "DATE",
+      "null_filter" : ">1900-01-01;<2020-01-01"
+    }, {
+      "name" : "CARD_NUM",
+      "type" : "TEXT"
+    }, {
+      "name" : "CARD_TYPE",
+      "type" : "ID"
+    }, {
+      "name" : "CATEGORY",
+      "type" : "TEXT"
+    }, {
+      "name" : "CAUTION_PAYED",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "CITY",
+      "type" : "TEXT"
+    }, {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "COMPANY_ID",
+      "type" : "ID"
+    }, {
+      "name" : "COST_CENTER_ID",
+      "type" : "ID"
+    }, {
+      "name" : "COUNTRY",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "EMAIL",
+      "type" : "TEXT"
+    }, {
+      "name" : "ID",
+      "type" : "ID"
+    }, {
+      "name" : "IS_VALID",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "LANGUAGE_ID",
+      "sql" : "LANGUAGE",
+      "type" : "ID",
+      "null_filter" : ">0"
+    }, {
+      "name" : "NATION",
+      "type" : "TEXT"
+    }, {
+      "name" : "OTHER_INFOS",
+      "type" : "TEXT"
+    }, {
+      "name" : "PHONE",
+      "type" : "TEXT"
+    }, {
+      "name" : "PREPAY_BALANCE_CASH",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "STREET",
+      "type" : "TEXT"
+    }, {
+      "name" : "TITLE",
+      "type" : "TEXT"
+    }, {
+      "name" : "ZIP_CODE",
+      "type" : "TEXT"
+    } ],
+    "pks" : {
+      "fields" : [ "ID" ]
+    }
+  }, {
+    "name" : "GROUPS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "ID" ]
+    }
+  }, {
+    "name" : "OPERATORS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "ENABLED",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "ID" ]
+    }
+  }, {
+    "name" : "PAYMENTS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "ID",
+      "type" : "ID"
+    }, {
+      "name" : "PAYMENT_TYPE",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "ID" ]
+    }
+  }, {
+    "name" : "PAYMENT_TYPES",
+    "fields" : [ {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "ID" ]
+    }
+  }, {
+    "name" : "PRICELEVELS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "ID" ]
+    }
+  }, {
+    "name" : "SHOPS",
+    "fields" : [ {
+      "name" : "ID",
+      "type" : "ID"
+    }, {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "LOCATION_ID",
+      "type" : "ID"
+    }, {
+      "name" : "SHOP_TYPE_ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "ID" ]
+    },
+    "from" : "select sho.*,sht.shop_type_id from <db>.SHOPS sho left join <db>.SHOPS_SHOP_TYPES sht on sho.id = sht.shop_id"
+  }, {
+    "name" : "TILLS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "ENABLED",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "ID" ]
+    }
+  }, {
+    "name" : "TRANSACTION_CAUSALS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "ID" ]
+    }
+  }, {
+    "name" : "TRANSACTIONS",
+    "fields" : [ {
+      "name" : "BOOKKEEPING_DATE",
+      "sql" : "trunc(BOOKKEEPING_DATE)",
+      "type" : "DATE"
+    }, {
+      "name" : "CARD_NUM",
+      "type" : "TEXT"
+    }, {
+      "name" : "GUESTS_NUM",
+      "type" : "INTEGER",
+      "null_filter" : ">0"
+    }, {
+      "name" : "ID",
+      "type" : "ID"
+    }, {
+      "name" : "OPERATOR_ID",
+      "type" : "ID"
+    }, {
+      "name" : "PROFIT_CENTER_ID",
+      "type" : "ID"
+    }, {
+      "name" : "SHOP_ID",
+      "type" : "ID"
+    }, {
+      "name" : "TILL_ID",
+      "type" : "ID"
+    }, {
+      "name" : "TOTAL_AMOUNT",
+      "sql" : "case when TRANSACTION_CAUSAL_ID is not null then 0 else TOTAL_AMOUNT end",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "TRANSACTION_CAUSAL_ID",
+      "type" : "ID"
+    }, {
+      "name" : "TRANS_DATE",
+      "sql" : "trunc(TRANS_DATE)",
+      "type" : "DATE"
+    }, {
+      "name" : "TRANS_NUM",
+      "type" : "INTEGER"
+    }, {
+      "name" : "TRANS_TIME",
+      "sql" : "to_char(TRANS_DATE, 'HH24:MI') || ':00'",
+      "type" : "TIME"
+    }, {
+      "name" : "COMMENT_TEXT",
+      "type" : "TEXT"
+    } ],
+    "pks" : {
+      "fields" : [ "ID" ]
+    },
+    "where" : "delete_operator_id is null"
+  }, {
+    "name" : "TRANS_ARTICLES",
+    "fields" : [ {
+      "name" : "ARTICLE_ID",
+      "type" : "ID"
+    }, {
+      "name" : "CAUSAL_ID",
+      "type" : "ID"
+    }, {
+      "name" : "DISCOUNT",
+      "sql" : "-DISCOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "HASH_CODE",
+      "type" : "ID"
+    }, {
+      "name" : "MENU_ID",
+      "type" : "ID"
+    }, {
+      "name" : "PRICE",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "PRICELEVEL_ID",
+      "type" : "ID"
+    }, {
+      "name" : "PROMOTION_DISCOUNT",
+      "sql" : "-PROMOTION_DISCOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "REFERENCE_PRICE",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "TRANSACTION_ID",
+      "type" : "ID"
+    }, {
+      "name" : "VAT_ID",
+      "type" : "ID"
+    }, {
+      "name" : "VAT_PERCENT",
+      "sql" : "0.01*VAT_PERCENT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "WEIGHT",
+      "sql" : "QTY_WEIGHT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "AMOUNT",
+      "sql" : "case when CAUSAL_ID is not null then 0 else PRICE+nvl(DISCOUNT,0)+nvl(PROMOTION_DISCOUNT,0) end",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "REBATE",
+      "sql" : "case when CAUSAL_ID is not null then -PRICE else -nvl(DISCOUNT,0)-nvl(PROMOTION_DISCOUNT,0) end",
+      "type" : "DECIMAL"
+    } ],
+    "pks" : {
+      "fields" : [ "TRANSACTION_ID", "HASH_CODE" ]
+    },
+    "where" : "delete_operator_id is null"
+  }, {
+    "name" : "TRANS_CARDS",
+    "fields" : [ {
+      "name" : "BONUS_BALANCE",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "CASH_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "CASH_BALANCE",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "CASH_LOAD",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "CARD_TYPE",
+      "type" : "ID"
+    }, {
+      "name" : "HASH_CODE",
+      "type" : "ID"
+    }, {
+      "name" : "TRANSACTION_ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "TRANSACTION_ID", "HASH_CODE", "CARD_TYPE" ]
+    }
+  }, {
+    "name" : "TRANS_PAYMENTS",
+    "fields" : [ {
+      "name" : "AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "CREDIT_CARD_ID",
+      "type" : "ID"
+    }, {
+      "name" : "HASH_CODE",
+      "type" : "ID"
+    }, {
+      "name" : "PAYMENT_ID",
+      "type" : "ID"
+    }, {
+      "name" : "TRANSACTION_ID",
+      "type" : "ID"
+    }, {
+      "name" : "IS_PREPAYMENT",
+      "type" : "BOOLEAN"
+    } ],
+    "pks" : {
+      "fields" : [ "TRANSACTION_ID", "HASH_CODE" ]
+    }
+  }, {
+    "name" : "VATS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "ID" ]
+    }
+  } ],
+  "company" : "tcpos_epo"
+}

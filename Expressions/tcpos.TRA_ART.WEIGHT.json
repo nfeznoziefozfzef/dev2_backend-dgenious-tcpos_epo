@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Kilos",
+      "category" : "Verkaufte Artikel",
+      "comment" : "Menge in Kilo"
+    },
+    "EN" : {
+      "name" : "Kilos",
+      "category" : "Articles sold",
+      "comment" : "Quantity in kilos"
+    },
+    "FR" : {
+      "name" : "Kilos",
+      "category" : "Ventes par articles",
+      "comment" : "Quantité en kilos"
+    }
+  },
+  "name" : "Kilos",
+  "category" : "Ventes par articles",
+  "comment" : "Quantité en kilos",
+  "requires" : "graph.tcpos;auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{TRA_ART}}.`WEIGHT`",
+  "path" : "tcpos.TRA_ART.WEIGHT",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tcpos_epo"
+}
